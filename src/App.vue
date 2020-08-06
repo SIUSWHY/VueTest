@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="menu_and_shopping_basket_layout">
+      <ProductsMenu></ProductsMenu>
+      <ProductBasket></ProductBasket>
+    </div>
+    <div>
+      <ProductItem />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ProductsMenu from "@/components/ProductsMenu";
+import ProductBasket from "@/components/ProductBasket";
+import ProductItem from "@/components/ProductItem";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    ProductsMenu,
+    ProductBasket,
+    ProductItem
   }
-}
+};
 </script>
 
 <style>
@@ -23,6 +31,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.menu_and_shopping_basket_layout {
+  float: left;
+  margin: 5px 15px 0px 0px;
+  display: flex;
+  flex-direction: column;
 }
 </style>
