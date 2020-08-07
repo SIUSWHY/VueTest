@@ -56,7 +56,6 @@ export default {
   font-size: 15px;
   text-decoration: none;
   cursor: pointer;
-  color: black;
 }
 .list_menu {
   list-style-type: none;

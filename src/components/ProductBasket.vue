@@ -1,6 +1,6 @@
 <template>
   <div class="shopping_basket_style">
-    <img src="@/i/shopping-basket.png" class="shopping_basket_pic_style" />
+    <img src="@/components/i/shopping-basket.png" class="shopping_basket_pic_style" />
     <div class="order_price">Итого: 0 руб</div>
     <div class="checkout_position">
       <button class="checkout_style">ОФОРМИТЬ ЗАКАЗ</button>

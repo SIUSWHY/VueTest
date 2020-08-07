@@ -2,11 +2,11 @@
   <div class="cards_wrapper">
     <div class="card_product">
       <div>
-        <img src="@/i/markets/subway_logo.png" class="logo_market" />
+        <img src="@/components/i/markets/subway_logo.png" class="logo_market" />
       </div>
       <div class="product_icon_position">
         <div class="product_icon_back_img">
-          <img src="@/i/sandwiches/ovoshnoy.png" class="pic_size" />
+          <img src="@/components/i/sandwiches/ovoshnoy.png" class="pic_size" />
         </div>
       </div>
       <div class="name_product">Овощной</div>
@@ -16,20 +16,21 @@
       <div class="price_item">Цена: 105 руб</div>
       <button class="buy_basket">В КОРЗИНУ</button>
     </div>
+
     <div class="card_product">
       <div>
-        <img src="@/i/markets/subway_logo.png" class="logo_market" />
+        <img src="@/components/i/markets/subway_logo.png" class="logo_market" />
       </div>
       <div class="product_icon_position">
         <div class="product_icon_back_img">
-          <img src="@/i/sandwiches/ovoshnoy.png" class="pic_size" />
+          <img src="@/components/i/sandwiches/ovoshnoy.png" class="pic_size" />
         </div>
       </div>
-      <div class="name_product">Овощной</div>
+      <div class="name_product" v-bind:name="items.name">{{items.name}}</div>
       <div class="ingredients">
-        <a class="description_border">Соус и овощи на выбор</a>
+        <a class="description_border" v-bind:name="items.description">{{items.description}}</a>
       </div>
-      <div class="price_item">Цена: 105 руб</div>
+      <div class="price_item" v-bind:name="items.price">Цена: {{items.price}} руб</div>
       <button class="buy_basket">В КОРЗИНУ</button>
     </div>
   </div>
@@ -38,7 +39,16 @@
 <script>
 export default {
   data() {
-    return { items: [] };
+    return {
+      items: [
+        { logo: "@/components/i/markets/subway_logo.png" },
+        { image: "@/components/i/sandwiches/ovoshnoy.png" },
+        { name: "Овощной" },
+        { description: "Соус и овощи на выбор" },
+        { price: "105" }
+      ],
+      activeCategory: "sandwiches"
+    };
   }
 };
 </script>
@@ -110,6 +120,6 @@ export default {
 .ingredients {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
-  padding: 10px;
+  height: 40px;
 }
 </style>

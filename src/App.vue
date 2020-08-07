@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="menu_and_shopping_basket_layout">
-      <ProductsMenu />
+      <ProductsMenu @chouseCategory="check(category)" />
       <ProductBasket />
     </div>
     <div>
@@ -20,6 +20,11 @@ export default {
     ProductsMenu,
     ProductBasket,
     ProductItem
+  },
+  methods: {
+    check(category) {
+      console.log(check);
+    }
   }
 };
 </script>
