@@ -16,24 +16,6 @@
       <div class="price_item">Цена: 105 руб</div>
       <button class="buy_basket">В КОРЗИНУ</button>
     </div>
-
-    <div class="card_product">
-      <div>
-        <img src="@/i/markets/subway_logo.png" class="logo_market" />
-      </div>
-      <div class="product_icon_position">
-        <div class="product_icon_back_img">
-          <img src="@/i/sandwiches/ovoshnoy.png" class="pic_size" />
-        </div>
-      </div>
-      <div class="name_product">Овощной</div>
-      <div class="ingredients">
-        <a class="description_border">Соус и овощи на выбор</a>
-      </div>
-      <div class="price_item">Цена: 105 руб</div>
-      <button class="buy_basket">В КОРЗИНУ</button>
-    </div>
-
     <div class="card_product">
       <div>
         <img src="@/i/markets/subway_logo.png" class="logo_market" />
@@ -54,6 +36,11 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return { items: [] };
+  }
+};
 </script>
 
 <style scoped>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="menu_and_shopping_basket_layout">
-      <ProductsMenu></ProductsMenu>
-      <ProductBasket></ProductBasket>
+      <ProductsMenu />
+      <ProductBasket />
     </div>
     <div>
       <ProductItem />
@@ -29,8 +29,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 .menu_and_shopping_basket_layout {
   float: left;
