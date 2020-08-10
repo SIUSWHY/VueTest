@@ -9,35 +9,23 @@
           <img src="@/components/i/sandwiches/ovoshnoy.png" class="pic_size" />
         </div>
       </div>
-      <div class="name_product">Овощной</div>
+      <div class="name_product" v-bind:name="items.name">{{items[2].name}}</div>
       <div class="ingredients">
-        <a class="description_border">Соус и овощи на выбор</a>
+        <a
+          class="description_border"
+          v-bind:description="items.description"
+        >{{items[3].description}}</a>
       </div>
-      <div class="price_item">Цена: 105 руб</div>
-      <button class="buy_basket">В КОРЗИНУ</button>
-    </div>
-
-    <div class="card_product">
-      <div>
-        <img src="@/components/i/markets/subway_logo.png" class="logo_market" />
-      </div>
-      <div class="product_icon_position">
-        <div class="product_icon_back_img">
-          <img src="@/components/i/sandwiches/ovoshnoy.png" class="pic_size" />
-        </div>
-      </div>
-      <div class="name_product" v-bind:name="items.name">{{items.name}}</div>
-      <div class="ingredients">
-        <a class="description_border" v-bind:name="items.description">{{items.description}}</a>
-      </div>
-      <div class="price_item" v-bind:name="items.price">Цена: {{items.price}} руб</div>
-      <button class="buy_basket">В КОРЗИНУ</button>
+      <div class="price_item" v-bind:price="items.price">Цена: {{items[4].price}} руб</div>
+      <QuantityProduct></QuantityProduct>
     </div>
   </div>
 </template>
 
 <script>
+import QuantityProduct from "@/components/QuantityProduct";
 export default {
+  components: { QuantityProduct },
   data() {
     return {
       items: [
@@ -54,15 +42,6 @@ export default {
 </script>
 
 <style scoped>
-.buy_basket {
-  background-color: #fbbe18;
-  border-radius: 50px;
-  font-size: 10px;
-  border: none;
-  padding: 5px;
-  width: 75px;
-  margin-top: 10px;
-}
 .price_item {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -80,11 +59,12 @@ export default {
 .cards_wrapper {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 180px;
 }
 .card_product {
   text-align: center;
   width: 150px;
-  margin: 10px 10px 60px 10px;
+  margin: 0px 10px 60px 10px;
 }
 .product_icon_position {
   position: relative;

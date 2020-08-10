@@ -4,7 +4,7 @@
       <ProductsMenu @chouseCategory="check(category)" />
       <ProductBasket />
     </div>
-    <div>
+    <div class="position_of_product_card">
       <ProductItem />
     </div>
   </div>
@@ -35,10 +35,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.position_of_product_card {
+  display: flex;
+}
 .menu_and_shopping_basket_layout {
   float: left;
-  margin: 5px 15px 0px 0px;
-  display: flex;
-  flex-direction: column;
+  margin: 0px 15px 0px 0px;
+  /* display: flex;
+  flex-direction: column; */
+  position: fixed;
 }
 </style>
