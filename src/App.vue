@@ -5,21 +5,22 @@
       <ProductBasket />
     </div>
     <div class="position_of_product_card">
-      <ProductItem />
+      <ProductCatalog></ProductCatalog>
     </div>
   </div>
 </template>
 
 <script>
+import ProductCatalog from "@/components/ProductCatalog";
+
 import ProductsMenu from "@/components/ProductsMenu";
 import ProductBasket from "@/components/ProductBasket";
-import ProductItem from "@/components/ProductItem";
 export default {
   name: "App",
   components: {
     ProductsMenu,
     ProductBasket,
-    ProductItem
+    ProductCatalog
   },
   methods: {
     check(category) {

@@ -1,47 +1,46 @@
 <template>
-  <div class="cards_wrapper">
+  <div class="ProductCatalogItem">
     <div class="card_product">
       <div>
         <img src="@/components/i/markets/subway_logo.png" class="logo_market" />
       </div>
       <div class="product_icon_position">
         <div class="product_icon_back_img">
-          <img src="@/components/i/sandwiches/ovoshnoy.png" class="pic_size" />
+          <img :src=" require('@/components/' + product_data.image) " class="pic_size" />
         </div>
       </div>
-      <div class="name_product" v-bind:name="items.name">{{items[2].name}}</div>
+      <div class="name_product">{{product_data.name}}</div>
       <div class="ingredients">
-        <a
-          class="description_border"
-          v-bind:description="items.description"
-        >{{items[3].description}}</a>
+        <a class="description_border">{{product_data.description}}</a>
       </div>
-      <div class="price_item" v-bind:price="items.price">Цена: {{items[4].price}} руб</div>
+      <div class="price_item">Цена: {{product_data.price}} руб</div>
       <QuantityProduct></QuantityProduct>
     </div>
   </div>
 </template>
-
 <script>
 import QuantityProduct from "@/components/QuantityProduct";
+
 export default {
-  components: { QuantityProduct },
+  components: {
+    QuantityProduct
+  },
+  props: {
+    product_data: {
+      type: Object,
+      default() {
+        return {};
+      }
+    }
+  },
   data() {
-    return {
-      items: [
-        { logo: "@/components/i/markets/subway_logo.png" },
-        { image: "@/components/i/sandwiches/ovoshnoy.png" },
-        { name: "Овощной" },
-        { description: "Соус и овощи на выбор" },
-        { price: "105" }
-      ],
-      activeCategory: "sandwiches"
-    };
-  }
+    return {};
+  },
+  computed: {}
 };
 </script>
 
-<style scoped>
+<style>
 .price_item {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -64,7 +63,7 @@ export default {
 .card_product {
   text-align: center;
   width: 150px;
-  margin: 0px 10px 60px 10px;
+  margin: 0px 10px 40px 10px;
 }
 .product_icon_position {
   position: relative;
@@ -90,16 +89,16 @@ export default {
   width: 110px;
 }
 .name_product {
+  height: 35px;
   min-height: 25px;
   text-align: center;
   font-weight: 600;
   font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 5px;
 }
 .ingredients {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
-  height: 40px;
+  height: 60px;
 }
 </style>
