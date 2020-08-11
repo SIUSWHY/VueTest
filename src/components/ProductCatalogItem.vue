@@ -73,8 +73,8 @@ export default {
   z-index: 102;
 }
 .product_icon_back_img {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border: 8px solid #fbbe18;
   border-radius: 100%;
   background-repeat: no-repeat;
@@ -83,17 +83,16 @@ export default {
   background-color: #fff;
 }
 .pic_size {
-  width: 130px;
+  width: 120px;
 }
 .logo_market {
   width: 110px;
 }
 .name_product {
-  height: 35px;
   min-height: 25px;
   text-align: center;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 12px;
   padding-top: 5px;
 }
 .ingredients {
