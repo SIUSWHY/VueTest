@@ -12,7 +12,6 @@
 
 <script>
 import ProductCatalog from "@/components/ProductCatalog";
-
 import ProductsMenu from "@/components/ProductsMenu";
 import ProductBasket from "@/components/ProductBasket";
 export default {

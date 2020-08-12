@@ -1,4 +1,4 @@
-data = {
+export default {
   "version": "0.0.16",
   "menu": [
     {

@@ -22,14 +22,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: {},
-            bread: "whit-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Индейка",
@@ -39,14 +32,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Ветчина",
@@ -56,14 +42,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Индейка и ветчина",
@@ -73,14 +52,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Морепродукты",
@@ -90,14 +62,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Тунец",
@@ -107,14 +72,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Острый итальянский",
@@ -124,14 +82,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Б.М.Т.",
@@ -141,14 +92,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Куриная грудка",
@@ -158,14 +102,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Ростбиф",
@@ -175,14 +112,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Мелт",
@@ -192,14 +122,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Курица бекон",
@@ -209,14 +132,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Террияки",
@@ -227,14 +143,7 @@ export default {
           category: "sandwiches",
           market: "subway",
           type: "multiple",
-          weight: 1,
-          components: {
-            size: "1x",
-            bread: "white-italian",
-            vegetable: [],
-            sauce: [],
-            filling: []
-          }
+          weight: 1
         },
         {
           name: "Биф Клаб",
