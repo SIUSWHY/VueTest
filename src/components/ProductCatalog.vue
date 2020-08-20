@@ -5,10 +5,12 @@
 </template>
 <script>
 import ProductCatalogItem from "@/components/ProductCatalogItem";
+import Store from "@/components/vuex/store";
 
 export default {
   components: {
-    ProductCatalogItem
+    ProductCatalogItem,
+    Store
   },
   props: {},
   data() {
