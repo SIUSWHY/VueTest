@@ -6,7 +6,7 @@
       </div>
       <div class="product_icon_position">
         <div class="product_icon_back_img">
-          <img :src=" require('@/components/' + product_data.image) " class="pic_size" />
+          <img :src=" require('@/components/' + product_data.image ) " class="pic_size" />
         </div>
       </div>
       <div class="name_product">{{product_data.name}}</div>
@@ -20,10 +20,12 @@
 </template>
 <script>
 import QuantityProduct from "@/components/QuantityProduct";
+import Store from "@/components/vuex/store";
 
 export default {
   components: {
-    QuantityProduct
+    QuantityProduct,
+    Store
   },
   props: {
     product_data: {

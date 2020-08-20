@@ -14,12 +14,15 @@
 import ProductCatalog from "@/components/ProductCatalog";
 import ProductsMenu from "@/components/ProductsMenu";
 import ProductBasket from "@/components/ProductBasket";
+import store from "@/components/vuex/store";
+
 export default {
   name: "App",
   components: {
     ProductsMenu,
     ProductBasket,
-    ProductCatalog
+    ProductCatalog,
+    store
   },
   methods: {
     check(category) {

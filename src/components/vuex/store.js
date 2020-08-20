@@ -1,13 +1,17 @@
 import vue from 'vue'
 import vuex from 'vuex'
+import menu from "@/components/cards";
+
 
 vue.use(vuex);
 
-let store = new vuex.Store(options:{
-state:{},
-mutation :{},
-actions:{},
-getters:{}
+const store = new vuex.Store({
+    state: menu, // spread
+    mutation: {},
+    actions: {},
+    getters: {}
 });
+console.log(store.state.menu);
+
 
 export default store;
