@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div id="quant">
     <!-- Количество товара -->
     <div class="input_group_quantity_goods">
       <div class="button_minus_style">
-        <span class="button_minus">-</span>
+        <span @click="decrement" class="button_minus">-</span>
       </div>
-      <input class="quantity_product" type="text" value="1" size="5" />
+      <p class="quantity_product" type="text" value="1" size="5" />
       <div class="button_plus_style">
-        <span class="button_plus">+</span>
+        <span @click="increment" class="button_plus">+</span>
       </div>
     </div>
     <button class="buy_basket">В КОРЗИНУ</button>
@@ -15,7 +15,13 @@
 </template>
 
 <script>
-export default {};
+import Quantity from "@/components/Quantity";
+
+export default {
+  components: {
+    Quantity
+  }
+};
 </script>
 
 <style scoped>
