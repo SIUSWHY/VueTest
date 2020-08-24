@@ -7,7 +7,9 @@ const store = new vuex.Store({
     state: menu, // spread
     mutation: {},
     actions: {},
-    getters: {}
+    getters: {
+        cards: this.$store.state.menu
+    }
 });
 console.log(store.state.menu);
 

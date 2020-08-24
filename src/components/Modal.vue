@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <button @click="visible = true">Show modal</button>
+    <modal :show="visible">
+      <div>какой то контент</div>
+    </modal>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      visible: false
+    };
+  }
+};
+</script>

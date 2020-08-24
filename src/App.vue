@@ -21,9 +21,9 @@ export default {
   components: {
     ProductsMenu,
     ProductBasket,
-    ProductCatalog,
-    store
+    ProductCatalog
   },
+  store,
   methods: {
     check(category) {
       console.log(check);
