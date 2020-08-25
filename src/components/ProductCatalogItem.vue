@@ -11,25 +11,24 @@
       </div>
       <div class="name_product">{{product_data.name}}</div>
       <div class="ingredients">
-        <a class="description_border">
-          <Modal {{product_data.description}} />
-        </a>
+        <a class="description_border">{{product_data.description}}</a>
       </div>
       <div class="price_item">Цена: {{product_data.price}} руб</div>
       <QuantityProduct></QuantityProduct>
     </div>
   </div>
 </template>
+
 <script>
 import QuantityProduct from "@/components/QuantityProduct";
 import Store from "@/components/vuex/store";
-import Modal from "@/components/Modal";
+// import Modal from "@/components/Modal";
 
 export default {
   components: {
     QuantityProduct,
-    Store,
-    Modal
+    Store
+    // Modal
   },
   props: {
     product_data: {

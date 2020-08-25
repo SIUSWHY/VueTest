@@ -1,7 +1,7 @@
 <template>
   <div class="ProductCatalog">
     <ProductCatalogItem
-      v-for="product in store.getters.cards"
+      v-for="product in $store.getters.cards"
       :key="product.name"
       :product_data="product"
     ></ProductCatalogItem>

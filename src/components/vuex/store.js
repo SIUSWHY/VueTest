@@ -8,7 +8,7 @@ const store = new vuex.Store({
     mutation: {},
     actions: {},
     getters: {
-        cards: this.$store.state.menu
+        cards: (state) => state.menu
     }
 });
 console.log(store.state.menu);
