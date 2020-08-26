@@ -33,7 +33,8 @@ export default {
     chouseCategory(category) {
       this.activeCategory = category;
     }
-  }
+  },
+  components: {}
 };
 </script>
 

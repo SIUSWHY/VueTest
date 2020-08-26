@@ -11,7 +11,13 @@
       </div>
       <div class="name_product">{{product_data.name}}</div>
       <div class="ingredients">
-        <a class="description_border">{{product_data.description}}</a>
+        <a class="description_border">
+          <div id="Button">
+            <div type="button" class="btn" @click="showModal">{{product_data.description}}</div>
+
+            <modal v-show="isModalVisible" @close="closeModal" />
+          </div>
+        </a>
       </div>
       <div class="price_item">Цена: {{product_data.price}} руб</div>
       <QuantityProduct></QuantityProduct>
@@ -22,13 +28,13 @@
 <script>
 import QuantityProduct from "@/components/QuantityProduct";
 import Store from "@/components/vuex/store";
-// import Modal from "@/components/Modal";
+import Modal from "@/components/Modal.vue";
 
 export default {
   components: {
     QuantityProduct,
-    Store
-    // Modal
+    Store,
+    Modal
   },
   props: {
     product_data: {
@@ -39,9 +45,19 @@ export default {
     }
   },
   data() {
-    return {};
+    return {
+      isModalVisible: false
+    };
   },
-  computed: {}
+  computed: {},
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
+  }
 };
 </script>
 
@@ -71,7 +87,6 @@ export default {
   margin: 0px 10px 40px 10px;
 }
 .product_icon_position {
-  position: relative;
   display: inline-block;
   margin: 0 auto;
   vertical-align: top;
@@ -103,6 +118,7 @@ export default {
 .ingredients {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
-  height: 60px;
+  height: 40px;
+  padding: 5px;
 }
 </style>

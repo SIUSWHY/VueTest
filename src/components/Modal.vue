@@ -18,37 +18,147 @@ export default {
         aria-labelledby="modalTitle"
         aria-describedby="modalDescription"
       >
-        <header class="modal-header" id="modalTitle">
-          <slot name="header">
-            This is the default tile!
-            <button
-              type="button"
-              class="btn-close"
-              @click="close"
-              aria-label="Close modal"
-            >x</button>
-          </slot>
-        </header>
-        <section class="modal-body" id="modalDescription">
-          <slot name="body">I'm the default body!</slot>
-        </section>
-        <footer class="modal-footer">
-          <slot name="footer">
-            I'm the default footer!
-            <button
-              type="button"
-              class="btn-green"
-              @click="close"
-              aria-label="Close modal"
-            >Close me!</button>
-          </slot>
-        </footer>
+        <div class="style_dialog_box">
+          <div class="style_dialog_head_text">
+            <div class="style_head_text">Выберите размер сендвича</div>
+            <button class="btn-green" type="button" @click="close">
+              <i class="fas fa-times-circle fa-3x"></i>
+            </button>
+          </div>
+        </div>
+        <div class="justify_content_text_menu">
+          <div class="style_dialog_text_menu">
+            <nav>
+              <ul class="style_menu">
+                <li class="ingredient_target" data-type="sizes">
+                  <a class="style_text_menu active_type_menu">Размер</a>
+                </li>
+                <li class="ingredient_target" data-type="breads">
+                  <a class="style_text_menu">Хлеб</a>
+                </li>
+                <li class="ingredient_target" data-type="vegetables">
+                  <a class="style_text_menu">Овощи</a>
+                </li>
+                <li class="ingredient_target" data-type="sauces">
+                  <a class="style_text_menu">Соусы</a>
+                </li>
+                <li class="ingredient_target" data-type="fillings">
+                  <a class="style_text_menu">Начинка</a>
+                </li>
+                <li class="ingredient_target" data-type="ready">
+                  <a class="style_text_menu">Готово!</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <button class="button_back_style">
+            <i class="fas fa-angle-left"></i> НАЗАД
+          </button>
+          <button class="button_next_style" id="trash">
+            ВПЕРЕД
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+        <div class="card_product_style"></div>
+        <div class="price_text_style">
+          Итого:
+          <div class="total_price">0</div>руб.
+        </div>
       </div>
     </div>
   </transition>
 </template>
 
 <style>
+.ingredient_target {
+  color: black;
+}
+.style_dialog_box {
+  background-color: #fbbe18;
+  height: 30px;
+  border-radius: 15px 15px 0px 0px;
+}
+.style_dialog_head_text {
+  font-size: 20px;
+  padding-top: 5px;
+  color: white;
+}
+.style_head_text {
+  display: flex;
+  justify-content: center;
+}
+.closeButton {
+  margin-top: -35px;
+  height: 25px;
+  color: white;
+  border: none;
+  background-color: #fbbe18;
+  float: right;
+}
+.justify_content_text_menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+.style_dialog_text_menu {
+  background-color: white;
+  border-radius: 15px;
+}
+.style_menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  max-width: 1240px;
+}
+.style_text_menu {
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+.button_back_style {
+  border: none;
+  float: left;
+  background-color: #e94a54;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  margin-left: 15px;
+  height: 20px;
+  font-weight: 600;
+}
+.button_next_style {
+  border: none;
+  float: right;
+  background-color: #e94a54;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 15px;
+  height: 20px;
+  font-weight: 600;
+}
+.card_product_style {
+  margin: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.price_text_style {
+  font-size: 15px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  color: #e94a54;
+}
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -66,7 +176,10 @@ export default {
   box-shadow: 2px 2px 20px 1px;
   overflow-x: auto;
   display: flex;
+  width: 500px;
   flex-direction: column;
+  color: black;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .modal-header,
@@ -103,8 +216,11 @@ export default {
 
 .btn-green {
   color: white;
-  background: #4aae9b;
-  border: 1px solid #4aae9b;
+  background: #c72222;
+  border: 1px solid #ff0022;
   border-radius: 2px;
+  height: 20px;
+  float: right;
+  margin-top: -20px;
 }
 </style>

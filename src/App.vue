@@ -4,6 +4,7 @@
       <ProductsMenu @chouseCategory="check(category)" />
       <ProductBasket />
     </div>
+    <div></div>
     <div class="position_of_product_card">
       <ProductCatalog></ProductCatalog>
     </div>
