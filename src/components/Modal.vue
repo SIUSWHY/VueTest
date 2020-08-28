@@ -27,18 +27,18 @@ export default {
           <div class="style_dialog_head_text">
             <div class="style_head_text">Выберите размер сендвича</div>
             <button class="btn-green" type="button" @click="close">
-              <i class="fas fa-times-circle fa-3x"></i>
+              <font-awesome-icon icon="times-circle" size="2x" />
             </button>
           </div>
         </div>
         <IngredientsMenu />
         <div>
           <button class="button_back_style">
-            <font-awesome-icon icon="chevron-right" />НАЗАД
+            <font-awesome-icon icon="angle-left" class="icon-margin" />НАЗАД
           </button>
-          <button class="button_next_style" id="trash">
+          <button class="button_next_style">
             ВПЕРЕД
-            <i class="fas fa-angle-right"></i>
+            <font-awesome-icon icon="angle-right" />
           </button>
         </div>
         <div class="card_product_style"></div>
@@ -52,6 +52,9 @@ export default {
 </template>
 
 <style>
+.icon-margin {
+  margin-right: 5px;
+}
 .ingredient_target {
   color: black;
 }
@@ -149,6 +152,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
 .modal {
@@ -197,11 +201,10 @@ export default {
 
 .btn-green {
   color: white;
-  background: #c72222;
-  border: 1px solid #ff0022;
+  background: #fbbe18;
+  border: 1px solid #fbbe18;
   border-radius: 2px;
-  height: 20px;
   float: right;
-  margin-top: -20px;
+  margin-top: -28px;
 }
 </style>

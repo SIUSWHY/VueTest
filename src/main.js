@@ -3,10 +3,10 @@ import App from './App.vue'
 import Vuex from 'vuex'
 // import Store from './vuex/store'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faTimes, faTimesCircle, faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faUserSecret)
+library.add([faUserSecret, faAngleRight, faAngleLeft, faTimesCircle]);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

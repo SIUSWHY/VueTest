@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     chouseCategory(category) {
-      this.activeCategory = sizes;
+      this.activeCategory = category;
     }
   },
   components: {}
