@@ -5,8 +5,13 @@
         <img src="@/components/i/markets/subway_logo.png" class="logo_market" />
       </div>
       <div class="product_icon_position">
-        <div class="product_icon_back_img">
-          <img :src=" require('@/components/' + product_data.image ) " class="pic_size" />
+        <div
+          class="product_icon_back_img"
+          :style="{
+            backgroundImage: `url(${require('@/components/' + product_data.image )})`
+          }"
+        >
+          <!-- <img :src=" require('@/components/' + product_data.image ) " class="pic_size" /> -->
         </div>
       </div>
       <div class="name_product">{{product_data.name}}</div>

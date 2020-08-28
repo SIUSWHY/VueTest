@@ -1,10 +1,15 @@
 <script>
+import IngredientsMenu from "@/components/IngredientsMenu";
+
 export default {
   name: "modal",
   methods: {
     close() {
       this.$emit("close");
     }
+  },
+  components: {
+    IngredientsMenu
   }
 };
 </script>
@@ -26,35 +31,10 @@ export default {
             </button>
           </div>
         </div>
-        <div class="justify_content_text_menu">
-          <div class="style_dialog_text_menu">
-            <nav>
-              <ul class="style_menu">
-                <li class="ingredient_target" data-type="sizes">
-                  <a class="style_text_menu active_type_menu">Размер</a>
-                </li>
-                <li class="ingredient_target" data-type="breads">
-                  <a class="style_text_menu">Хлеб</a>
-                </li>
-                <li class="ingredient_target" data-type="vegetables">
-                  <a class="style_text_menu">Овощи</a>
-                </li>
-                <li class="ingredient_target" data-type="sauces">
-                  <a class="style_text_menu">Соусы</a>
-                </li>
-                <li class="ingredient_target" data-type="fillings">
-                  <a class="style_text_menu">Начинка</a>
-                </li>
-                <li class="ingredient_target" data-type="ready">
-                  <a class="style_text_menu">Готово!</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+        <IngredientsMenu />
         <div>
           <button class="button_back_style">
-            <i class="fas fa-angle-left"></i> НАЗАД
+            <font-awesome-icon icon="chevron-right" />НАЗАД
           </button>
           <button class="button_next_style" id="trash">
             ВПЕРЕД
@@ -176,7 +156,8 @@ export default {
   box-shadow: 2px 2px 20px 1px;
   overflow-x: auto;
   display: flex;
-  width: 500px;
+  width: 600px;
+  height: 400px;
   flex-direction: column;
   color: black;
   border-radius: 15px 15px 0px 0px;
